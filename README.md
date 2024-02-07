@@ -8,7 +8,7 @@ Projeyi indirip kullanmak isterseniz;
 [Firebase](https://console.firebase.google.com/) üzerinden bir proje oluşturun.
 Projenizde Authentication, Cloud Firestore, Storage özelliklerini aktif ediniz.
 console.cloud.google.com linki üzerinden Maps SDK for Android ve Places API apilerini aktif ediniz.
-Firebase üzerinden indirmiş olduğunuz google-services.json dosyasını projede [app](https://github.com/emretsksn/SocialApp/tree/main/app) klasörüne kopyalayınız.
+Firebase üzerinden indirmiş olduğunuz google-services.json dosyasını projede [app](https://github.com/emretsksn/SocialMediaApp/tree/master/app) klasörüne kopyalayınız.
 
 Bildirimler için firebase üzerinden Cloud Functions aktif edebilir ve [Cloud Functions](https://github.com/emretsksn/SocialMediaApp/blob/master/cloud_functions.js) linkindeki kodları deploy ederek kullanabilirsiniz.
 
