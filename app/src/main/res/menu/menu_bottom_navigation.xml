@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="false"
+        android:icon="@drawable/a_home_selector"
+        android:title="@string/title_activity_main_page"
+        android:titleCondensed="@string/title_activity_main_page"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/a_search_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showAsAction="ifRoom"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/addPostFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_add_active"
+        app:showAsAction="ifRoom"
+        android:title="@string/share_post" />
+    <item
+        android:id="@+id/messagesFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/a_message_selector"
+        app:showAsAction="ifRoom"
+        android:title="@string/message" />
+    <item
+        android:id="@+id/userProfileFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/a_profile_selector"
+        app:showAsAction="ifRoom"
+        android:title="@string/title_activity_user_profile" />
+</menu>

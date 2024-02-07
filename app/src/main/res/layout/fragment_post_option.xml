@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/page_background"
+    tools:context=".ui.fragment.post.PostOptionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:foreground="@drawable/ic_fragment_line"
+            android:foregroundGravity="center"
+            app:tint="#00FFFFFF" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/options"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:paddingVertical="16dp"
+            android:drawingCacheQuality="auto"
+            android:text="@string/save"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:typeface="normal"
+            app:drawableStartCompat="@drawable/ic_bookmark_add" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:drawingCacheQuality="auto"
+            android:paddingVertical="16dp"
+            android:text="@string/post_alert_view"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:typeface="normal"
+            app:drawableStartCompat="@drawable/ic_view_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_followuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:drawingCacheQuality="auto"
+             android:paddingVertical="16dp"
+            android:text="@string/title_followuser"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_color"
+            app:drawableStartCompat="@drawable/ic_user_add" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_sendRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:drawingCacheQuality="auto"
+            android:paddingVertical="16dp"
+            android:text="@string/title_followuser"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_color"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_user_add" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_unfollowuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:drawingCacheQuality="auto"
+             android:paddingVertical="16dp"
+            android:text="@string/unfollow"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_color"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_user_remover" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_sendmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:drawingCacheQuality="auto"
+             android:paddingVertical="16dp"
+            android:text="@string/send_message"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_color"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_message" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pm_gotoprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="8dp"
+            android:drawingCacheQuality="auto"
+             android:paddingVertical="16dp"
+            android:text="@string/go_to_profile"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_color"
+            app:drawableLeftCompat="@drawable/ic_search_user" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,186 @@
+<resources>
+    <string name="app_name" translatable="false">SocialApp</string>
+    <string name="app_version" translatable="false">1.0.9</string>
+    <string name="website_url" translatable="false">https://emretaskesen.com/</string>
+
+    <string name="account_setting">Hesap Ayarları</string>
+    <string name="add_gif">Gif Ekle</string>
+    <string name="add_image">Fotoğraf Yükle</string>
+    <string name="added_image">Eklenen Görsel</string>
+    <string name="cancel">İptal</string>
+    <string name="approve">Onayla</string>
+    <string name="alert_message_delete_message">Bu mesajı silmek istediğinizden emin misiniz?</string>
+    <string name="alert_title_delete_message">Mesajı Sil</string>
+    <string name="anonymous_user">İsimsiz Kullanıcı</string>
+    <string name="app_info_page_name">Uygulama Detayları</string>
+    <string name="app_setting">Uygulama Ayarları</string>
+    <string name="archive_post">Arşivlenenler</string>
+    <string name="archive">Arşivle</string>
+    <string name="birthday">Doğum Tarihi</string>
+    <string name="cancel_action">İşlemi İptal Et</string>
+    <string name="cant_load_message">Mesaj alınamadı: %1$s</string>
+    <string name="channel_description">Uygulama ile ilgili genel bildirimler için kullanılır.</string>
+    <string name="channel_name">Genel Bildirimler</string>
+    <string name="clear_messages">Sohbeti Temizle</string>
+    <string name="comment_size">%1$s kişi beğendi</string>
+    <string name="delete_all">Hepsini Sil</string>
+    <string name="delete_messages_info">Tüm mesajlar silinmeyebilir. İşlemi tekrarlayınız veya destek ekibi ile iletişime geçiniz.</string>
+    <string name="delete_messages">Mesajları Sil</string>
+    <string name="delete_post_message">Paylaşım silinecektir. Silindiğinde geri alınamaz. Emin misiniz?</string>
+    <string name="delete_post">Paylaşımı Sil</string>
+    <string name="delete_text">Sil</string>
+    <string name="delete_yourself">Kendin için sil</string>
+    <string name="following_text">Takip Edilenler</string>
+    <string name="follower_text">Takip Edenler</string>
+    <string name="gender_dont_reveal">Belirtme</string>
+    <string name="gender_female">Kadın</string>
+    <string name="gender_male">Erkek</string>
+    <string name="gender_selection">Cinsiyet</string>
+    <string name="go_to_profile">Profile Git</string>
+    <string name="group_name">Grup Adı</string>
+    <string name="email">E-Posta</string>
+    <string name="password">Şifre</string>
+    <string name="password_confirm">Şifre Tekrar</string>
+    <string name="search">Ara</string>
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="image_uploaded">Resim yüklendi.</string>
+    <string name="image_uploading">Resim yükleniyor: %1$s</string>
+    <string name="just_now">Az önce</string>
+    <string name="liked_post">Beğenilenler</string>
+    <string name="likes">Beğeniler</string>
+    <string name="message_deleted_successfully">Mesaj başarıyla silindi.</string>
+    <string name="message_notverification">E-Posta adresinizi doğrulayınız.</string>
+    <string name="message_updatesuccesful">Bilgileri Güncellendi</string>
+    <string name="message">Mesajlar</string>
+    <string name="minute_ago">%1$s dakika önce</string>
+    <string name="nav_close">Kapat</string>
+    <string name="nav_open">Aç</string>
+    <string name="no_connection">Bağlantı yok!</string>
+    <string name="no_message">Mesaj Yok</string>
+    <string name="notification">Bildirimler</string>
+    <string name="null_data">********</string>
+    <string name="null_follow">Hiç kimseyi takip etmiyorsun</string>
+    <string name="null_post">Paylaşım bulunamadı</string>
+    <string name="number_of_followers">%1$s takipçi</string>
+    <string name="number_of_follows">%1$s takip edilen</string>
+    <string name="number_of_shares">%1$s paylaşım</string>
+    <string name="online">Çevrimiçi</string>
+    <string name="only_delete_me">Sadece Benden Sil</string>
+    <string name="options">Seçenekler</string>
+    <string name="places_status_error">Bazı hatalar oluştu. Hatanın devam etmesi durumunda geliştirici ile iletişime geçiniz.</string>
+    <string name="post_alert_delete">Sil</string>
+    <string name="post_alert_edit">Düzenle</string>
+    <string name="post_alert_view">Görüntüle</string>
+    <string name="register_title">Kayıt Ol</string>
+    <string name="request_completed">Geri Çek</string>
+    <string name="request_size_text">%1$s takipçi isteği var</string>
+    <string name="save_comleted">Kaydedildi</string>
+    <string name="save_image">Resmi Kaydet</string>
+    <string name="saved_post">Kaydedilenler</string>
+    <string name="searh_location">Konum Ara</string>
+    <string name="select_gallery">Galeriden Seç</string>
+    <string name="select_media_source_window_text">Medya kaynağını seçiniz.</string>
+    <string name="send_location">Konum Gönder</string>
+    <string name="send_post_content_hint">Ne düşünüyorsun?</string>
+    <string name="send">Gönder\n</string>
+    <string name="sent_message">Mesaj Gönder</string>
+    <string name="share_post_snackbar_message">Paylaşım Yapıldı</string>
+    <string name="share_post">Paylaş</string>
+    <string name="sign_out_alert_message">Çıkış yapılacak. Emin misiniz?</string>
+    <string name="sign_out_alert_title">Çıkış Yap</string>
+    <string name="sign_out_toast_text">Çıkış Yapmaktan Vazgeçildi</string>
+    <string name="take_back_message">Mesajı geri al</string>
+    <string name="title_activity_app_info">Uygulama Detayları</string>
+    <string name="title_activity_edit_post">Paylaşımı Düzenle</string>
+    <string name="title_activity_login_page">Giriş Yap</string>
+    <string name="title_activity_main_page">Ana Sayfa</string>
+    <string name="title_activity_maps">Harita</string>
+    <string name="title_activity_my_messages">Mesajlarım</string>
+    <string name="title_activity_post_detail">Paylaşım Detayları</string>
+    <string name="title_activity_post_page">Paylaşım Yap</string>
+    <string name="title_activity_searhpage">Ara</string>
+    <string name="title_activity_setting_page">Ayarlar</string>
+    <string name="title_activity_settings">Ayarlar</string>
+    <string name="title_activity_user_profile">Hesabım</string>
+    <string name="title_activity_users_page">Tüm Kullanıcılar</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_comments">Yorumlar</string>
+    <string name="title_controldata">Lütfen Bilgileri Eksiksiz Giriniz!</string>
+    <string name="title_download">İndir</string>
+    <string name="title_edit_account">Profili Düzenle</string>
+    <string name="title_emptypost_description">Paylaşım Bulunamadı</string>
+    <string name="title_errorconfirmpassword">Lütfen şifrenizi tekrar giriniz!</string>
+    <string name="title_follow_request">Takip İstekleri</string>
+    <string name="title_followuser">Takip Et</string>
+    <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="gallery">Galeri</string>
+    <string name="last_seen">Son Görülme</string>
+    <string name="links">Bağlantılar</string>
+    <string name="login">Giriş Yap</string>
+
+    <string name="title_ortext">Veya</string>
+    <string name="password_not_match">Parolalar Uyuşmuyor</string>
+    <string name="password_reset_mail_send">"Şifre sıfırlama maili gönderildi!"</string>
+
+    <string name="biography">Biyografi</string>
+    <string name="name_surname">Ad</string>
+    <string name="refresh">Yenile</string>
+    <string name="remove_archive">Arşivden çıkar</string>
+    <string name="reset_password_button">Şifremi Yenile</string>
+    <string name="reset_password_info">Şifre yenileme işlemi için aşağıdaki e-posta adresi alanına kullanıcınıza ait e-posta adresinizi giriniz.\nŞifremi yenile butonuna tıkladığınızda eşleşen e-posta adresi mevcut ise şifre yenileme e-posta gönderilecektir.\nGönderien e-postadaki linke tıklayarak şifrenizi yenileyebilir ve güncel şifreniz ile giriş yapabilirsiniz.\n</string>
+    <string name="save">Kaydet</string>
+    <string name="send_message">Mesaj Gönder</string>
+
+    <string name="unfollow">Takibi Bırak</string>
+    <string name="update_password_toast_text">Şifre Güncellendi!</string>
+    <string name="update_text">Ana sayfada renk düzenlemeleri.\nŞifremi unuttum özelliği.\nKime sesleniyorsun kısmı için kullanıcıları listeleme.\nBirden fazla paylaşım yapma hatası giderildi.\nYavşaklık yap butonuna tıklanınca uyarı çıkıyor.\nProfil resmi yükleme.\nKullanıcı profilinde şifre, kullanıcı adı ve profil resmi için ayrı güncelleme butonları. \nTek butonda hata verebiliyordu.\nHesap silme fonksiyonu.\nBildirim özelliği.\n\n\n</string>
+    <string name="user_name_tag">\@%1$s</string>
+    <string name="user_profile">Kullanıcı Profili</string>
+    <string name="username_whitespace_control">%1$s_</string>
+    <string name="users_page_name">Kullanıcılar</string>
+    <string name="version_detail_text">Bu sürümde neler var?</string>
+    <string name="welcome_text">Hoşgeldiniz %1$s</string>
+    <string name="write_a_message">Mesaj</string>
+    <string name="writing">yazıyor…</string>
+    <string name="edit_image">Resmi Düzenle</string>
+    <string name="group_name_etc">Grup:%1$s</string>
+    <string name="shares">Paylaşımlar</string>
+    <string name="mentions">Bahsetmeler</string>
+    <string name="user_available">Kullanıcı Mevcut</string>
+    <string name="maximum_10_users_added">En fazla 10 kullanıcı eklenebilir.</string>
+    <string name="user_mentioned">%1$s etiketlendi</string>
+    <string name="changePassword">Şifremi Değiştir</string>
+    <!-- Ayarlar -->
+    <!-- Hesap ayarları-->
+    <string name="accountPrivacy">Hesap Gizliliği</string>
+    <string name="activityStatus">Hareket Durumu</string>
+    <string name="key_account_privacy">key_account_privacy</string>
+    <string name="key_account_activity">key_account_activity</string>
+    <string name="openToEveryone">Herkese Açık</string>
+    <string name="hidden">Gizli</string>
+    <!--Uygulama Ayarları-->
+    <string name="choose_theme">Tema</string>
+    <string name="key_app_theme">key_app_theme</string>
+    <string name="key_app_notification">key_app_notification</string>
+    <string name="notification_off">Bildirimler Kapalı</string>
+    <string name="notification_on">Bildirimler Açık</string>
+    <string name="defaultSystemSetting">Varsayılan Sistem Ayarı</string>
+    <string name="light">Açık</string>
+    <string name="dark">Koyu</string>
+    <string name="discover">Keşfet</string>
+    <string name="location">Konum</string>
+    <string name="copyText">Kopyala</string>
+    <string name="reply_label">Yanıtla</string>
+    <string-array name="pref_themes_entries">
+        <item>Varsayılan Sistem Ayarı</item>
+        <item>Açık</item>
+        <item>Koyu</item>
+    </string-array>
+
+    <string-array name="pref_themes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,28 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_location"
+        android:icon="@drawable/ic_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showAsAction="always"
+        android:title="@string/send_location"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/action_camera"
+        android:icon="@drawable/ic_capture_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showAsAction="always"
+        android:title="@string/add_image" />
+
+    <item
+        android:id="@+id/action_gif"
+        android:icon="@drawable/ic_gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/add_gif"
+        app:showAsAction="always"/>
+</menu>

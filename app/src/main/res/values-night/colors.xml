@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="card_background">#131314</color>
+    <color name="nav_view_background">#1E1F20</color>
+    <color name="page_background">#131314</color>
+    <color name="bottomNavBackground">#1E1F20</color>
+    <color name="splash_background">#1E1F20</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="appbar_background">#1E1F20</color>
+    <color name="icon_background">#FFFFFF</color>
+    <color name="link_color">#00FFFF</color>
+    <color name="button_background">#1E1F20</color>
+    <color name="button_stroke">#323433</color>
+    <color name="receive_message_background">#7E7E7E</color>
+</resources>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/appBarTheme"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/userprofileToolbar"
+            style="@style/actionBarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:collapseIcon="@drawable/ic_user"
+            app:layout_collapseMode="pin"
+            app:menu="@menu/menu_userprofile"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="@string/title_activity_user_profile"
+            app:titleMargin="0dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginHorizontal="16dp"
+                android:backgroundTint="@color/button_background"
+                android:shadowColor="@color/cardview_shadow_end_color"
+                android:text="@string/title_edit_account"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                app:elevation="1dp"
+                app:iconTint="@color/icon_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/followerCount"
+                app:strokeColor="@color/button_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/followCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:paddingVertical="4dp"
+                android:text="@string/number_of_follows"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toTopOf="@+id/editProfileButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/followerCount"
+                app:layout_constraintTop_toBottomOf="@+id/upLink" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/followerCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:text="@string/number_of_followers"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toTopOf="@+id/editProfileButton"
+                app:layout_constraintEnd_toStartOf="@+id/followCount"
+                app:layout_constraintStart_toEndOf="@+id/postSize"
+                app:layout_constraintTop_toBottomOf="@+id/upLink" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/postSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingVertical="4dp"
+                android:text="@string/number_of_shares"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toTopOf="@+id/editProfileButton"
+                app:layout_constraintEnd_toStartOf="@+id/followerCount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upLink" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/upLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:autoLink="web"
+                android:breakStrategy="high_quality"
+                android:paddingVertical="4dp"
+                android:text="@string/null_data"
+                android:textColor="@color/text_color"
+                android:textColorLink="@color/link_color"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toTopOf="@+id/followCount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upBiography" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/upBiography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingVertical="4dp"
+                android:text="@string/null_data"
+                android:textColor="@color/text_color"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toTopOf="@+id/upLink"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upUserName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/upPersonalName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/null_data"
+                android:textColor="@color/text_color"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/upUserName"
+                app:layout_constraintEnd_toStartOf="@+id/myPhoto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myPhoto" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/upUserName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/null_data"
+                android:textColor="@color/text_color"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/myPhoto"
+                app:layout_constraintEnd_toStartOf="@+id/myPhoto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upPersonalName" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myPhoto"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="16dp"
+                android:layout_marginEnd="16dp"
+                android:longClickable="true"
+                android:src="@drawable/ic_rounded_user"
+                app:civ_border_color="@color/seffaf_siyah_yuzde_25"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toTopOf="@+id/upBiography"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/upPersonalName"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bottomNavBackground"
+            app:tabIconTint="@color/tab_item_color"
+            app:tabIndicatorColor="@color/tab_item_color"
+            app:tabIndicatorHeight="4dp"
+            app:tabSelectedTextColor="@color/tab_item_color"
+            app:tabTextColor="@color/text_color" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    tools:context=".ui.fragment.message.AddMessageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/userprofileToolbar"
+            style="@style/actionBarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:collapseIcon="@drawable/ic_user"
+            app:layout_collapseMode="pin"
+            app:title="@string/send_message"
+            app:titleMargin="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="@color/appbar_background"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/idSearchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@color/page_background"
+                    app:iconifiedByDefault="true"
+                    app:queryHint="@string/search"
+                    app:searchPrefixText="@string/search" />
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sentMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/appbar_background"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/groupImage"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="8dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_community"
+                    android:visibility="gone"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/addUser"
+                    style="?attr/chipStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    app:chipSpacing="2dp"
+                    app:chipSpacingHorizontal="2dp"
+                    app:chipSpacingVertical="2dp"
+                    app:singleLine="false" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/group_name"
+                    android:inputType="text"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/sentMessageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:backgroundTint="@color/button_background"
+                    android:text="@string/sent_message"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    app:cornerRadius="4dp"
+                    app:elevation="1dp"
+                    app:icon="@drawable/ic_message"
+                    app:iconTint="@color/icon_background" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</FrameLayout>

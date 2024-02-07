@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/account_setting"
+        app:icon="@drawable/ic_manage_accounts"
+        app:singleLineTitle="false">
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="@string/key_account_privacy"
+            android:title="@string/accountPrivacy"
+            app:icon="@drawable/ic_account_box"
+            app:summaryOff="@string/hidden"
+            app:summaryOn="@string/openToEveryone" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="@string/key_account_activity"
+            android:title="@string/activityStatus"
+            app:icon="@drawable/ic_view_icon"
+            app:summaryOff="@string/hidden"
+            app:summaryOn="@string/openToEveryone" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/app_setting"
+        app:icon="@drawable/ic_settings"
+        app:singleLineTitle="false">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/choose_theme"
+            android:entries="@array/pref_themes_entries"
+            android:entryValues="@array/pref_themes"
+            android:key="@string/key_app_theme"
+            android:summary="@string/defaultSystemSetting"
+            android:title="@string/choose_theme"
+            app:dialogIcon="@drawable/ic_light_mode"
+            app:icon="@drawable/ic_light_mode" />
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="@string/key_app_notification"
+            android:title="@string/notification"
+            app:icon="@drawable/ic_notifications"
+            app:summaryOff="@string/notification_off"
+            app:summaryOn="@string/notification_on" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

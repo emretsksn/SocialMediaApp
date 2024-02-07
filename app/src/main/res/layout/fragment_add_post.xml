@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appbar_background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/postpageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:title="@string/title_activity_post_page">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sharePost"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#304FFE"
+            android:text="@string/share_post"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:cornerRadius="32dp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="56dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
+        android:background="@color/page_background"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loadingProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:indeterminateDrawable="@drawable/ic_fragment_line"
+            android:max="100"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="250dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loadingProgress">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_rounded_user"
+                tools:srcCompat="@drawable/ic_rounded_user" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/postContent"
+                style="@style/textInputBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:autoLink="all"
+                android:hint="@string/send_post_content_hint"
+                android:inputType="textMultiLine|textCapSentences"
+                android:linksClickable="true"
+                android:maxLength="500"
+                android:maxLines="5"
+                android:textColorLink="@color/link_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <TextView
+                android:id="@+id/addedLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/null_data"
+                android:textColor="@color/link_color"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/imagesArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/taggedUsers"
+                style="?attr/chipStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:chipSpacing="2dp"
+                app:chipSpacingHorizontal="2dp"
+                app:chipSpacingVertical="2dp"
+                app:singleLine="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appbar_background"
+            android:elevation="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            tools:ignore="UselessLeaf">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addLocation"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:cornerRadius="64dp"
+                app:icon="@drawable/ic_location_add"
+                app:iconTint="@color/icon_background"
+                app:iconTintMode="multiply" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addUserTagButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:cornerRadius="64dp"
+                app:icon="@drawable/ic_mentioned_users"
+                app:iconTint="@color/icon_background"
+                app:iconTintMode="multiply" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addImageButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:cornerRadius="64dp"
+                app:icon="@drawable/ic_add_photo_gallery"
+                app:iconTint="@color/icon_background"
+                app:iconTintMode="multiply" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addGifButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:cornerRadius="64dp"
+                app:icon="@drawable/ic_gif"
+                app:iconTint="@color/icon_background"
+                app:iconTintMode="multiply" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

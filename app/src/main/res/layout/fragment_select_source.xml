@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appbar_background"
+    tools:context=".ui.fragment.post.PostOptionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:foreground="@drawable/ic_fragment_line"
+            android:foregroundGravity="center"
+            app:tint="#00FFFFFF" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:text="@string/select_media_source_window_text"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectCamera"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:backgroundTint="@color/button_background"
+            android:drawableLeft="@drawable/ic_add_photo_camera"
+            android:text="@string/title_camera"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            app:strokeColor="@color/button_stroke"
+            app:strokeWidth="1dp"
+            tools:ignore="RtlHardcoded" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:minWidth="200dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/button_background"
+            android:drawableLeft="@drawable/ic_add_photo_gallery"
+            android:text="@string/gallery"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            app:strokeColor="@color/button_stroke"
+            app:strokeWidth="1dp"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+</FrameLayout>

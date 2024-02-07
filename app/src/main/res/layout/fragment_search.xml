@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        style="@style/appBarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/userprofileToolbar"
+            style="@style/actionBarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:collapseIcon="@drawable/ic_user"
+            app:layout_collapseMode="pin"
+            app:title="@string/discover"
+            app:titleMargin="0dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="@color/appbar_background"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/idSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/page_background"
+                app:iconifiedByDefault="true"
+                android:layout_gravity="end"
+                app:queryHint="@string/search"
+                app:searchPrefixText="@string/search" />
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/emptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/null_data"
+                android:textAlignment="center"
+                android:textColor="@color/text_color"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollIndicators="right"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emptyText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/discorverPostDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollIndicators="right"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userDetail">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

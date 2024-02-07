@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".core.Application"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.Tpost"
+        android:largeHeap="true"
+        tools:targetApi="34">
+        <activity
+            android:name=".ui.activity.message.GroupChat"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.user.FollowInfo"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.user.EditUserProfile"
+            android:exported="false"
+            android:label="@string/title_edit_account" />
+        <activity
+            android:name=".ui.activity.main.ActionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.images.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.post.ActionPost"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".ui.activity.main.MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".ui.activity.main.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main_page"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.user.Auth"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.user.NotificationPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.emretaskesen.tpost.ACTION_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.main.SearchPage"
+            android:exported="false"
+            android:label="@string/title_activity_searhpage"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ui.activity.settings.AppSettings"
+            android:exported="false"
+            android:label="@string/title_activity_setting_page" />
+        <activity
+            android:name=".ui.activity.message.ChatPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.emretaskesen.tpost.ACTION_MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.post.EditPost"
+            android:exported="false"
+            android:label="@string/title_activity_edit_post" />
+        <activity
+            android:name=".ui.activity.post.PostDetail"
+            android:exported="true"
+            android:label="@string/title_activity_post_detail">
+            <intent-filter>
+                <action android:name="android.intent.action.POST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.settings.AppInfo"
+            android:exported="false"
+            android:label="@string/title_activity_app_info" />
+        <activity
+            android:name=".ui.activity.user.UserProfile"
+            android:exported="false"
+            android:label="@string/title_activity_user_profile" />
+        <activity
+            android:name=".ui.activity.post.PostPage"
+            android:exported="false"
+            android:label="@string/title_activity_post_page" />
+        <activity
+            android:name=".ui.activity.main.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.emretaskesen.tpost.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <service
+            android:name=".service.FCMService"
+            android:exported="false"
+            android:permission="android.permission.POST_NOTIFICATIONS">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

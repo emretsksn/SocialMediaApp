@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vpLikeSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/null_data"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/imagesArea">
+
+                <ImageButton
+                    android:id="@+id/vpLikeButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_like_null" />
+
+                <ImageButton
+                    android:id="@+id/vpCommentButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="4dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/vpLikeButton"
+                    app:layout_constraintStart_toEndOf="@+id/vpLikeButton"
+                    app:layout_constraintTop_toTopOf="@+id/vpLikeButton"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_comment" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/vpCommentSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/null_data"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/vpCommentButton"
+                    app:layout_constraintStart_toEndOf="@+id/vpCommentButton"
+                    app:layout_constraintTop_toTopOf="@+id/vpCommentButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/vpLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/null_data"
+                android:textColor="@color/link_color"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vpOption" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/taggedUsers"
+                style="?attr/chipStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:visibility="gone"
+                app:chipSpacing="2dp"
+                app:chipSpacingHorizontal="2dp"
+                app:chipSpacingVertical="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vpLikeSize"
+                app:singleLine="false" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vpPostContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all|web|phone|none|map|email"
+                android:breakStrategy="high_quality"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/null_data"
+                android:textColorLink="@color/link_color"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vpLocation" />
+
+            <LinearLayout
+                android:id="@+id/imagesArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vpPostContent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vpGoToProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/vpOption"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/vpOption">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/vpUserProfile"
+                    android:layout_width="38dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_rounded_user"
+                    app:civ_border_color="@color/seffaf_siyah_yuzde_25"
+                    app:civ_border_width="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/vpPersonalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/null_data"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vpUserProfile"
+                    app:layout_constraintTop_toTopOf="@+id/vpUserProfile" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/vpUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/vpPersonalName"
+                    android:layout_alignBottom="@+id/vpPersonalName"
+                    android:layout_toEndOf="@+id/vpUserProfile"
+                    android:text="@string/null_data"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/vpUserProfile"
+                    app:layout_constraintStart_toEndOf="@+id/vpUserProfile" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/vpOption"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignTop="@+id/vpGoToProfile"
+                android:layout_alignBottom="@+id/vpGoToProfile"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:cropToPadding="false"
+                android:foreground="@drawable/ic_menu_vertical"
+                android:foregroundGravity="center"
+                android:pointerIcon="zoom_in"
+                android:scaleType="centerCrop"
+                android:textAlignment="viewEnd"
+                app:layout_constraintBottom_toTopOf="@+id/vpLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vpPostTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:drawablePadding="4dp"
+                android:text="@string/null_data"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/vpOption"
+                app:layout_constraintEnd_toStartOf="@+id/vpOption"
+                app:layout_constraintTop_toTopOf="@+id/vpOption" />
+
+            <ImageButton
+                android:id="@+id/tagSelector"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/ic_notif_ment"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/vpGoToProfile"
+                app:layout_constraintStart_toEndOf="@+id/vpGoToProfile"
+                app:layout_constraintTop_toTopOf="@+id/vpGoToProfile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

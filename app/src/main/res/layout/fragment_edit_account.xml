@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?><!--on below line we are creating a swipe to refresh layout-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.user.EditAccountFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        style="@style/appBarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/editAccountToolbar"
+            style="@style/actionBarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollEffect="compress"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:menu="@menu/menu_edit_profie"
+            app:popupTheme="@style/actionBarTheme"
+            app:title="@string/title_edit_account"
+            app:titleCentered="false" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/loadingProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:indeterminateDrawable="@drawable/ic_fragment_line"
+                android:max="100"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/loadingLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/null_data"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myPhoto"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="8dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_rounded_user" />
+
+            <TextView
+                android:id="@+id/editImageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                android:text="@string/edit_image"
+                android:textAlignment="center"
+                android:textColor="@color/link_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="8dp"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/personelNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:cursorVisible="true"
+                    android:hint="@string/name_surname"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:textColor="@color/text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/personelNameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/profileunEditInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:hint="@string/user_name"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:textColor="@color/text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profileunEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/profilebioEditInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:hint="@string/biography"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profilebioEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/profileLinkInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:hint="@string/links"
+                    app:placeholderText="www.link.com">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profileLinkEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:linksClickable="true"
+                        android:textColorLink="@color/link_color" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/birthDayInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:autoLink="web|email"
+                    android:hint="@string/birthday"
+                    android:textColor="@color/text_color"
+                    android:textColorLink="@color/link_color"
+                    app:placeholderText="GG/AA/YYYY">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/birthDayText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/genderSelection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/genderSelectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/gender_selection" />
+
+                <RadioButton
+                    android:id="@+id/genderMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:text="@string/gender_male" />
+
+                <RadioButton
+                    android:id="@+id/genderFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:text="@string/gender_female" />
+
+                <RadioButton
+                    android:id="@+id/genderNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:text="@string/gender_dont_reveal" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/changePassword"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/button_background"
+                android:shadowColor="@color/cardview_shadow_end_color"
+                android:text="@string/changePassword"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                app:elevation="1dp"
+                app:iconTint="@color/icon_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/followerCount"
+                app:strokeColor="@color/button_stroke"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/app_name"
+        app:showAsAction="collapseActionView">
+        <menu>
+            <item
+                android:id="@+id/usersFragment"
+                android:icon="@drawable/ic_users"
+                android:title="@string/title_activity_users_page" />
+        </menu>
+    </item>
+    <item
+        android:title="@string/account_setting"
+        app:showAsAction="collapseActionView">
+        <menu>
+            <item
+                android:id="@+id/editProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_edit"
+                android:title="@string/title_edit_account" />
+            <item
+                android:id="@+id/savedPost"
+                android:icon="@drawable/ic_bookmarks"
+                android:title="@string/saved_post" />
+            <item
+                android:id="@+id/likedPost"
+                android:icon="@drawable/ic_like_null"
+                android:title="@string/liked_post" />
+            <item
+                android:id="@+id/archivedPost"
+                android:icon="@drawable/ic_archive_add"
+                android:title="@string/archive_post" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_log_out"
+                android:title="@string/sign_out_alert_title" />
+        </menu>
+    </item>
+
+    <item
+        android:title="@string/app_setting"
+        app:showAsAction="collapseActionView">
+        <menu>
+            <item
+                android:id="@+id/nav_appinfo"
+                android:icon="@drawable/ic_info"
+                android:title="@string/app_info_page_name" />
+            <item
+                android:id="@+id/nav_appsetting"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/title_activity_setting_page" />
+        </menu>
+    </item>
+</menu>

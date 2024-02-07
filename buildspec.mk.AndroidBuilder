@@ -1,0 +1,4 @@
+# generated from AndroidBuilder
+TARGET_PRODUCT?=Windows Subsystem for Linux has no installed distributions.
+TARGET_BUILD_VARIANT?=user
+OUT_DIR?=out-$(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT)

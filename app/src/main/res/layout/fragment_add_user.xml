@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    tools:context=".ui.fragment.user.AddUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/userprofileToolbar"
+            style="@style/actionBarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:collapseIcon="@drawable/ic_user"
+            app:layout_collapseMode="pin"
+            app:title="@string/users_page_name"
+            app:titleMargin="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="@color/appbar_background"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/idSearchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@color/page_background"
+                    app:iconifiedByDefault="true"
+                    app:queryHint="@string/search"
+                    app:searchPrefixText="@string/search" />
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</FrameLayout>

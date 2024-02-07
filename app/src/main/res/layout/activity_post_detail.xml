@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/postPageCoordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    tools:context=".ui.activity.post.EditPost">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/postDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:menu="@menu/menu_notification_page"
+            app:navigationIcon="@drawable/ic_arrow_left"
+            app:popupTheme="@style/Base.CardView"
+            app:title="@string/title_activity_post_detail" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="0dp"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/vpLikeSize"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/null_data"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imagesArea">
+
+                        <ImageButton
+                            android:id="@+id/vpLikeButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:backgroundTint="#00FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_like_null" />
+
+                        <ImageButton
+                            android:id="@+id/vpCommentButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="4dp"
+                            android:backgroundTint="#00FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="@+id/vpLikeButton"
+                            app:layout_constraintStart_toEndOf="@+id/vpLikeButton"
+                            app:layout_constraintTop_toTopOf="@+id/vpLikeButton"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/ic_comment" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/vpCommentSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_data"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/vpCommentButton"
+                            app:layout_constraintStart_toEndOf="@+id/vpCommentButton"
+                            app:layout_constraintTop_toTopOf="@+id/vpCommentButton" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/vpLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/null_data"
+                        android:textColor="@color/link_color"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/vpPostContent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vpGoToProfile" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/taggedUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        app:chipSpacing="2dp"
+                        app:chipSpacingHorizontal="2dp"
+                        app:chipSpacingVertical="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vpLikeSize"
+                        app:singleLine="false"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/vpPostContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all|web|phone|none|map|email"
+                        android:breakStrategy="high_quality"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/null_data"
+                        android:textColorLink="@color/link_color"
+                        android:textIsSelectable="true"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vpLocation" />
+
+                    <LinearLayout
+                        android:id="@+id/imagesArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vpPostContent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/vpGoToProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/vpLocation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/vpUserProfile"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/ic_rounded_user"
+                            app:civ_border_color="@color/seffaf_siyah_yuzde_25"
+                            app:civ_border_width="1dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/vpPersonalName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_data"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/vpUserProfile"
+                            app:layout_constraintTop_toTopOf="@+id/vpUserProfile" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/vpUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/vpPersonalName"
+                            android:layout_alignBottom="@+id/vpPersonalName"
+                            android:layout_toEndOf="@+id/vpUserProfile"
+                            android:text="@string/null_data"
+                            android:textIsSelectable="true"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/vpUserProfile"
+                            app:layout_constraintStart_toEndOf="@+id/vpUserProfile" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/vpPostTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:drawablePadding="4dp"
+                        android:text="@string/null_data"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/vpLocation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/tagSelector"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="#00FFFFFF"
+                        android:src="@drawable/ic_notif_ment"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/vpGoToProfile"
+                        app:layout_constraintStart_toEndOf="@+id/vpGoToProfile"
+                        app:layout_constraintTop_toTopOf="@+id/vpGoToProfile" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/commentArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/pageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_comments"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/emptyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/null_data"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/commentDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:cardBackgroundColor="@color/appbar_background"
+                        app:cardCornerRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            tools:layout_editor_absoluteX="1dp">
+
+                            <ImageButton
+                                android:id="@+id/addEmoji"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:backgroundTint="#00FFFFFF"
+                                android:src="@drawable/ic_emoji"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/commentText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:background="@color/appbar_background"
+                                android:hint="@string/write_a_message"
+                                android:inputType="textMultiLine|textCapSentences"
+                                android:maxLines="6"
+                                android:minHeight="48dp"
+                                android:scrollbars="vertical"
+                                android:textColorHint="@color/passive_icon" />
+
+                            <ImageButton
+                                android:id="@+id/addGif"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:backgroundTint="#00FFFFFF"
+                                android:src="@drawable/ic_gif"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/sendButton"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageButton
+                                android:id="@+id/commentSent"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+
+                                android:backgroundTint="#00FFFFFF"
+                                android:contentDescription="@string/send_message"
+                                android:iconTint="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_message_send_passive"
+                                tools:targetApi="o" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardEmojiArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:alwaysDrawnWithCache="true"
+                        android:animateLayoutChanges="true"
+                        android:animationCache="true"
+
+                        android:orientation="vertical"
+                        android:paddingBottom="16dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/card_background"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.emoji2.emojipicker.EmojiPickerView
+                            android:id="@+id/emoji_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:nestedScrollingEnabled="true"
+                            android:saveEnabled="true"
+                            android:soundEffectsEnabled="true"
+                            app:emojiGridColumns="9" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
