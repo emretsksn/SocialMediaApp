@@ -1,8 +1,20 @@
 # SocialApp
 Sosyal medya uygulaması
 
-Uygulama içinden görüntüler
+# Uygulama içinden görüntüler
 ![SocialMediaApp](https://github.com/emretsksn/SocialMediaApp/assets/58102146/8a7e265e-6e4c-4135-8823-efeb64a2f433)
+
+# Proje Hakkında
+Proje bir sosyal medya uygulaması olarak oluşturulmuştur.
+Yazılı ve görsel paylaşım yapabilmektedir.
+Uygulama içi bireysel mesajlaşma ve grup mesajlaşma özelliği mevcuttur.
+Mesajlarda görsel paylaşım, yer bildirimi ve gif paylaşımı yapılabilmektedir.
+Paylaşımlarda yer bildirimi, kullanıcı etiketleme yapılabilmektedir.
+Kamera aksiyonu uygulama içinde oluşturulan aktivite ile sağlanmaktadır.
+Projede maps api ve places api kullanılarak harita üzerinden lokasyon seçimi ve paylaşımı yapılabilmektedir.
+Cloud Functions ile mesaj, etiketleme, beğeni, yorum gibi işlemlerde bildirim gönderilmektedir.
+Arayüz tasarımı ve özellikler [Twitter](https://play.google.com/store/apps/details?id=com.twitter.android&hl=tr&gl=US), [Instagram](https://play.google.com/store/apps/details?id=com.instagram.android), [Threads](https://play.google.com/store/apps/details?id=com.instagram.barcelona) gibi sosyal medya uygulamalarından esinlenerek kodlanmıştır.
+Ayarlar menüsü eklenmiş ve ayarlarda tema, bildirim, hesap gizliliği, aktivite durumu gibi eylemler kontrol edilebilmektedir.
 
 Projeyi indirip kullanmak isterseniz;
 [Firebase](https://console.firebase.google.com/) üzerinden bir proje oluşturun.
@@ -17,7 +29,7 @@ Bildirimler için firebase üzerinden Cloud Functions aktif edebilir ve [Cloud F
 - Google Maps API
 - Google Places API
 
-  Kullanılan kütüphaneler
+# Kullanılan kütüphaneler
 - [uCrop](https://github.com/Yalantis/uCrop)
 - [android-gif-drawable](https://github.com/koral--/android-gif-drawable)
 - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
@@ -40,5 +52,4 @@ Bildirimler için firebase üzerinden Cloud Functions aktif edebilir ve [Cloud F
 - Güncel bilgilerim ve tecrübelerimle yeni bir projeye başladım ve MVVM mimarisi ile ilerliyorum.
 
 # Teşekkür
-- [Kasım Adalan](https://www.linkedin.com/in/kas%C4%B1m-adalan/)
-- [Atıl Samancıoğlu](https://www.linkedin.com/in/at%C4%B1l-samanc%C4%B1o%C4%9Flu-96028871/)
+[Kasım Adalan](https://www.linkedin.com/in/kas%C4%B1m-adalan/) ve [Atıl Samancıoğlu](https://www.linkedin.com/in/at%C4%B1l-samanc%C4%B1o%C4%9Flu-96028871/) beye özellikle teşekkürlerimi iletiyorum. Android alanında kendimi geliştirmem adına yayınladıkları kursların çok faydasını gördüm.
