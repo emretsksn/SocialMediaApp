@@ -1,6 +1,10 @@
 # SocialApp
 Sosyal medya uygulaması
 
+Uygulama içinden görüntüler
+![Screenshot_20240207_234319](https://github.com/emretsksn/SocialMediaApp/assets/58102146/dec7b767-0ff0-4e8e-98ea-484bd4cbcc60)
+
+
 Projeyi indirip kullanmak isterseniz;
 [Firebase](https://console.firebase.google.com/) üzerinden bir proje oluşturun.
 Projenizde Authentication, Cloud Firestore, Storage özelliklerini aktif ediniz.
