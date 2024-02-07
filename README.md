@@ -7,7 +7,7 @@ Projenizde Authentication, Cloud Firestore, Storage özelliklerini aktif ediniz.
 console.cloud.google.com linki üzerinden Maps SDK for Android ve Places API apilerini aktif ediniz.
 Firebase üzerinden indirmiş olduğunuz google-services.json dosyasını projede [app](https://github.com/emretsksn/SocialApp/tree/main/app) klasörüne kopyalayınız.
 
-Bildirimler için firebase üzerinden Cloud Functions aktif edebilir ve [Cloud Functions Code](https://github.com/emretsksn/SocialApp/blob/main/cloudFunctionsCode) linkindeki kodları deploy ederek kullanabilirsiniz.
+Bildirimler için firebase üzerinden Cloud Functions aktif edebilir ve [Cloud Functions](https://github.com/emretsksn/SocialMediaApp/blob/master/cloud_functions.js) linkindeki kodları deploy ederek kullanabilirsiniz.
 
 Not:
 - Projede revize edilmesi gereken alanlar mevcut olup, proje ham haliyle paylaşılmıştır.
@@ -28,4 +28,3 @@ Kullanılan kaynaklar
 - [Firebase ile Proje Geliştirme](https://www.btkakademi.gov.tr/portal/course/firebase-ile-proje-gelistirme-15059)
 - [ChatGPT 3.5](https://chat.openai.com/)
 - [back4app Agent](https://www.back4app.com/agent)
-git commit -m "Güncellenmiş .gitignore dosyası"
