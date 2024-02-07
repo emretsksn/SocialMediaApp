@@ -12,18 +12,19 @@ Firebase üzerinden indirmiş olduğunuz google-services.json dosyasını projed
 
 Bildirimler için firebase üzerinden Cloud Functions aktif edebilir ve [Cloud Functions](https://github.com/emretsksn/SocialMediaApp/blob/master/cloud_functions.js) linkindeki kodları deploy ederek kullanabilirsiniz.
 
-Not:
-- Projede revize edilmesi gereken alanlar mevcut olup, proje ham haliyle paylaşılmıştır.
-- MVVM yapısı kullanılmamış olup, geleneksel yöntemlerle yazılmıştır.
+# Kullanılan servis ve yapılar
+- Firebase
+- Google Maps API
+- Google Places API
 
-Kullanılan kütüphaneler
+  Kullanılan kütüphaneler
 - [uCrop](https://github.com/Yalantis/uCrop)
 - [android-gif-drawable](https://github.com/koral--/android-gif-drawable)
 - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
 - [Glide](https://github.com/bumptech/glide)
 - [KameraX](https://developer.android.com/jetpack/androidx/releases/camera?hl=tr)
 
-Kullanılan kaynaklar
+# Kullanılan kaynaklar
 - [GeeksforGeeks](www.geeksforgeeks.org)
 - [Android Mobil Uygulama Geliştirme Eğitimi](https://www.udemy.com/course/android-mobil-uygulama-gelistirme-egitimi-kotlin)
 - [Geliştiriciler için Android](https://developer.android.com/?hl=tr)
@@ -31,3 +32,13 @@ Kullanılan kaynaklar
 - [Firebase ile Proje Geliştirme](https://www.btkakademi.gov.tr/portal/course/firebase-ile-proje-gelistirme-15059)
 - [ChatGPT 3.5](https://chat.openai.com/)
 - [back4app Agent](https://www.back4app.com/agent)
+
+# Not
+- Projede revize edilmesi gereken alanlar mevcut olup, proje ham haliyle paylaşılmıştır.
+- MVVM yapısı kullanılmamış olup, geleneksel yöntemlerle yazılmıştır.
+- Projeye 4 ay önce sıfır bilgi ile başladığım için eksiklerim çok fazla.
+- Güncel bilgilerim ve tecrübelerimle yeni bir projeye başladım ve MVVM mimarisi ile ilerliyorum.
+
+# Teşekkür
+- [Kasım Adalan](https://www.linkedin.com/in/kas%C4%B1m-adalan/)
+- [Atıl Samancıoğlu](https://www.linkedin.com/in/at%C4%B1l-samanc%C4%B1o%C4%9Flu-96028871/)
